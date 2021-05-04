@@ -1,0 +1,99 @@
+/* ===== Designs ===== */
+.designs-showcase{
+    height: 100%;
+    width: 100%;
+    padding:0 20rem;
+    background: $primary;
+    .subheading{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height:100%;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        display: flex;
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            overflow: hidden;
+            width: 25%;
+            height: 100%;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+            img{
+                height: 16rem;
+                width: 100%;
+                filter: grayscale(100%);
+                box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.550);
+                transition: all 0.3s ease-out;
+            }
+            &:hover{
+                img{
+                    cursor: pointer;
+                    filter: grayscale(0%);
+                    transform: scale(1.2,1.2);
+                }
+            }
+        }
+    }
+}
+
+/* ===== Modal- Designs ===== */
+.modal-img{
+    background: rgba(0,0,0, 0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index:1030;
+    transition: all 0.25s ease-out;
+    .full-img{
+        position: absolute;
+        height: 130%;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%) scale(0.5);
+        transition: all 0.25s ease-out;
+    }
+    .caption{
+        color:$secondary;
+        font-size:2rem;
+        position: absolute;
+        bottom:5%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+}
+.modal-img.open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.full-img.open{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+
+
+
+@media (max-width: 900px){
+    .designs-showcase{
+        padding:0 3rem;
+        .swiper-container{
+            .swiper-slide{
+                width: 40%;
+                height: 100%;
+                -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+            }
+        }
+    }
+}

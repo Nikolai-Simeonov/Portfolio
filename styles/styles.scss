@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "./_variables.scss";
+@import "./landingPage";
+@import "./about";
+@import "./projects";
+@import "./skills";
+@import "./designs";
+@import "./skills";
+@import "./contacts";
+@import "./footer";
+
+@font-face{
+    src: url("/assets/fonts/Oswald.ttf");
+    font-family: oswald;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+/* ===== Defaults ===== */
+html{
+    scroll-behavior: smooth;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border:0;
+  -webkit-text-fill-color: $text;
+  transition: background-color 5000s ease-in-out 0s;
+}
+section{
+    padding:3rem 0;
+    background: $primary;
+}
+a{
+    text-decoration:none
+}
+a:hover{
+    text-decoration: none;
+}
+a, 
+a:visited,
+a:active {
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+a,
+span{
+    font-size: 15px;
+}
+// Headings
+h1{
+    font-size:40px;
+}
+h2{
+    font-size:35px;
+}
+h3{
+    font-size:30px;
+}
+h4{
+    font-size:25px;
+}
+h5{
+    font-size:20px;
+}
+// Headings
+.heading,
+.subheading{
+    position: relative;
+    height:10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:$secondary;
+    z-index: 10;
+    width: 100%;
+    padding:0 20rem;
+    .heading-border{
+        position: absolute;
+        width: 28em;
+        height:1px;
+        bottom:0;
+        margin-bottom:0.5rem;
+        background:$secondary;
+    }
+}
+.subheading{
+    color:$secondary;
+    border: 0;
+    padding:0;
+    height:15vh;
+    .heading-border{
+        position: absolute;
+        width: 28em;
+        height:1px;
+        bottom:0;
+        margin-bottom:2.5rem;
+        background:$secondary;
+    }
+}
+
+@media (max-width: 699px){
+    h1{
+        font-size:30px;
+    }
+    h2{
+        font-size:25px;
+    }
+    h3{
+        font-size:22px;
+    }
+    h4{
+        font-size:20px;
+    }
+    h5{
+        font-size:18px;
+    }
+    .heading,
+    .subheading{
+        height: auto;
+        padding:0 1rem;
+        .heading-border{
+            width: 15em;
+            margin-bottom:0;
+        }
+    }
+}
+@media (max-width: 900px){
+    h1{
+        font-size:32px;
+    }
+    h2{
+        font-size:28px;
+    }
+    h3{
+        font-size:26px;
+    }
+    h4{
+        font-size:24px;
+    }
+    h5{
+        font-size:22px;
+    }
+    .heading,
+    .subheading{
+        padding:0 3rem;
+        .heading-border{
+            width: 15em;
+        }
+    }
+}

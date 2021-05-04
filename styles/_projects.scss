@@ -1,0 +1,334 @@
+/* ========== Projects ========== */
+.project-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding:0 20rem;
+    margin:1.5rem 0;
+    height: 70vh;
+    background: $primary;
+    z-index: 5;
+    .project-description{
+        padding:3rem 0;
+        height: 100%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .project-title{
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            margin-bottom:1.5rem;
+            color:$secondary;
+        }
+        .project-about{
+            height: auto;
+            display: flex;
+            color:$text;
+            margin-bottom:2rem;
+            font-size:14px;
+            width: 85%;
+        }
+        .project-links{
+            height: auto;
+            margin-bottom:2rem;
+            display: flex;
+            align-items: center;
+            a{
+                @include button;
+                &:hover{
+                    @include hoverEffect;
+                }
+            }
+        }
+    }
+    .hots-showcase{
+        height: 100%;
+        width: 90%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .hots-img{
+            position: absolute;
+            height:100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index:5;
+            padding:3rem 0;
+            img{               
+                width: 100%;
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.05,1.05);
+                    transition: 0.3s;
+                }
+            }
+        }
+        .hots-background{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            z-index:-1;
+            padding:3rem 0;
+            bottom: 6%;
+            img{
+                height: 95%;
+                width: 95%;
+            }
+        }
+    }
+    .project-square-box{
+        .project-square1{
+            transform: rotate(0deg);
+        }
+    }
+}
+/* ===== React Edition ===== */
+.react-edition-background{
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+/* ===== Twitter ===== */
+.twitter-box{
+    justify-content: space-between;
+    .twitter-showcase{
+        position: relative;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 90%;
+        z-index:-1;
+        img{
+            height:32vh;
+            transition:0.3s;
+            &:hover{
+                transform: scale(1.05,1.05);
+                transition:0.3s;
+            }
+        }
+    }
+}
+
+/* ===== Music Player ===== */
+.music-player{
+    height:100%;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height:60%;
+        z-index: 5;
+    }
+    .mobile-back{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+        }
+    }
+    .mobile-front{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 108%;
+        bottom:0;
+        z-index: -1;
+        img{
+            width: 95%;
+            height: 100%;
+        }
+    }
+}
+
+
+/* ===== Calculator ===== */
+.calculator-showcase{
+    height:100%;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:3rem 0;
+    .math-background{
+        height:100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height:80%;
+            width:80%;
+            opacity: 1;
+        }
+    }
+    .calculator{
+        position: absolute;
+        height:100%;
+        width: 100%;
+        bottom:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height:55%;
+            background:linear-gradient(to bottom right, rgba(255, 255, 255, 0.600), rgba(255, 255, 255, 0.100));
+            border-radius: 20px;
+            border: 1px solid $secondary;
+            backdrop-filter: blur(1.5px);
+            box-shadow:0 3px 15px rgba(0, 0, 0, 0.800);
+        }
+    }
+}
+
+// Purple Cards
+.project-square-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    .project-square1{
+        position: absolute;
+        height:70%;
+        width: 100%;
+        filter: brightness(100%);
+        background: $tertiary;
+        transform: rotate(1deg);
+        border-radius: 5px;
+    }
+    .project-square2{
+        position: absolute;
+        height:70%;
+        width: 100%;
+        transform: rotate(-7deg);
+        z-index: -1;
+        filter: brightness(60%);
+        background: $tertiary;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+
+@media (max-width: 699px){
+    .project-box{
+        height:90vh;
+        padding:0 1rem;
+        margin:1.5rem 0;
+        flex-direction: column;
+        text-align: center;
+        .project-description{
+            padding:1rem 0;
+            width: 100%;
+            justify-content: center;
+            .project-title{
+                display: flex;
+                justify-content: center;
+                height: auto;
+            }
+            .project-about{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+            .project-links{
+                margin-bottom:0;
+                justify-content: space-evenly;
+                a{
+                    width: 42%;
+                    margin:0;
+                }
+            }
+        }
+        .hots-showcase{
+            .hots-background{
+                display: none;
+            }
+        }
+    }
+    /* ===== Twitter ===== */
+    .twitter-box{
+        .twitter-showcase{
+            text-align: center;
+            img{
+                height:22vh;
+            }
+        }
+    }
+
+    /* ===== Music Player ===== */
+    .music-player{
+        height:50%;
+        img{
+            height:50%;
+            z-index: 5;
+        }
+        .mobile-back{
+            display: none;
+        }
+        .mobile-front{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            height: 80%;
+            width: 80%;
+            bottom:0;
+            z-index: -1;
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 900px){
+    .project-box{
+        padding:0 3rem;
+        margin:1.5rem 0;
+        height:90vh;
+
+        .project-description{
+            padding:3rem 0;
+            width: 100%;
+        }
+    }
+    /* ===== Twitter ===== */
+    .twitter-box{
+        .twitter-showcase{
+            img{
+                height:26vh;
+            }
+        }
+    }
+
+    /* ===== Music Player ===== */
+    .music-player{
+        height:80%;
+        img{
+            height:60%;
+            z-index: 5;
+        }
+    }
+}

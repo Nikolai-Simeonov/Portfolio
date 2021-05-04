@@ -1,0 +1,21 @@
+$main-font:'Montserrat', sans-serif;
+$primary: #181818;
+$secondary: #fff;
+$tertiary:#5F389E;
+$text: rgb(230, 230, 230);
+
+
+@mixin button{
+    filter: brightness(70%);
+    outline: 0;
+    border: 0;
+    padding: 0.5rem 3rem;
+    color:$secondary;
+    background: $tertiary;
+    margin-right:2rem;
+    transition: all 0.2s ease-out;
+}
+@mixin hoverEffect{
+    filter: brightness(125%);
+    box-shadow:0 0 8px rgba(255, 255, 255, 0.450);
+}

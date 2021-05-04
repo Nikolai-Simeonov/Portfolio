@@ -1,0 +1,62 @@
+/* ========== About Me ========== */
+.about-me-container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $primary;
+    padding:0 20rem;
+    .about-me-description{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .about-me-text{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            span{
+                color: $text;
+            }
+        }
+    }
+    .about-me-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 699px){
+    .about-me-container{
+        padding:0 1rem;
+        .about-me-description{
+            .about-me-text{
+                span{
+                    font-size: 13px;;
+                }
+            }
+        }
+        .about-me-img{
+            height: 100%;
+            width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: 700px){}
+@media (min-width: 900px){}
+@media (min-width: 1200px){}
+@media (min-width: 1400px){}

@@ -1,0 +1,204 @@
+/* ===== Contacts ===== */
+#contact{
+    padding-bottom:0;
+}
+.contact-container{
+    position: relative;
+    background: $primary;
+    height:60vh;
+    padding:0 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $main-font;
+    overflow: hidden;
+    img{
+        height:55%;
+        position: absolute;
+        bottom: 0;;
+        opacity: 0.5;
+        z-index:0;
+        padding-bottom:3rem;
+    }
+    .contact-img1{
+        height:70%;
+        left:0;
+        padding-left:20rem;
+        padding-bottom:3rem;
+    }
+    .contact-img2{
+        right:0;
+        padding-right:20rem;
+    }
+    .form-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index:5;
+        form{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .info-container{
+                height: 50%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom:1rem;
+                .details{ 
+                    position:relative; 
+                    height: 100%;
+                    width: 60%;
+                    margin-bottom:2.5rem;
+                    input{
+                        font-size:15px;
+                        padding:10px 10px 10px 5px;
+                        display:block;
+                        width:100%;
+                        border:none;
+                        border-bottom:1px solid $text;
+                        background: $primary;
+                        color:$secondary;
+                        &:focus{ 
+                            outline:none; 
+                        }
+                        &:focus ~ label, input:valid ~ label{
+                            top:-22px;
+                            font-size:13px;
+                            color:$secondary;
+                        }
+                        &:focus ~ .bar:before, 
+                        &:focus ~ .bar:after {
+                            width:50%;
+                        }
+                        &:focus ~ .highlight {
+                            animation:inputHighlighter 0.3s ease;
+                        }
+                    }
+                    label{
+                        color:$text; 
+                        font-size:15px;
+                        font-weight:normal;
+                        position:absolute;
+                        pointer-events:none;
+                        left:5px;
+                        top:-12px;
+                        font-weight: 600;
+                        transition:0.3s ease all; 
+                    }
+                    .bar{ 
+                        position:relative; 
+                        display:block; 
+                        width:100%; 
+                        &:before, 
+                        &:after{
+                            content:'';
+                            height:2px; 
+                            width:0;
+                            bottom:0px; 
+                            position:absolute;
+                            background:$tertiary; 
+                            transition:0.3s ease all; 
+                        }
+                        &:before {
+                            left:50%;
+                        }
+                        &:after {
+                            right:50%; 
+                        }
+                    }
+                    .highlight {
+                        position:absolute;
+                        height:60%; 
+                        width:100px; 
+                        top:25%; 
+                        left:0;
+                        pointer-events:none;
+                        opacity:0.5;
+                    }
+                }
+            }
+            .message-container{
+                height: 100%;
+                width:60%;
+                margin-bottom:2.5rem;
+                label{
+                    position: relative;
+                    top:-5px;
+                    left:5px;
+                    color:$text;
+                    font-weight: 600;
+                }
+                textarea{
+                    height: 100%;
+                    width: 100%;
+                    resize: none;
+                    background: transparent;
+                    outline: 0;
+                    border: 1px solid $text;
+                    color:$secondary;
+                    transition: all 0.3s ease-in-out;
+                    &:focus{
+                        bordeR:1px solid $secondary;
+                    }
+                }
+            }
+            .submit{
+                @include button;
+                margin-right:0;
+                &:hover{
+                    @include hoverEffect;
+                }
+                &:active{
+                    transform: scale(0.9,0.9);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 900px){
+    .contact-container{
+        position: relative;
+        background: $primary;
+        height:70vh;
+        padding:0 1rem;
+        overflow: hidden;
+        img{
+            height:40%;
+            position: absolute;
+            bottom: 0;;
+            opacity: 0.5;
+            z-index:0;
+            padding-bottom:3rem;
+        }
+        .contact-img1{
+            display: none;
+        }
+        .contact-img2{
+            right:0;
+            padding-right:1rem;
+        }
+        .form-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index:5;
+            form{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .submit{
+                    margin:0;
+                }
+            }
+        }
+    }
+}

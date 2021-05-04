@@ -1,0 +1,129 @@
+/* ===== Skills ===== */
+.skills-container{
+    height: 60vh;
+    padding:0 20rem;
+    overflow: hidden;
+    .skills-showcase{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        padding: 3rem 0;
+        svg{
+            height: 100%;
+            background: radial-gradient( at 50% bottom, #2e2e2e 20%, #181818 60%);
+        }
+        .skills-coding-container{
+            height:100%;
+            .coding-heading{
+                color:$secondary;
+                border-bottom:1px solid $secondary;
+                width:200px;
+                margin: 1.5rem 0;
+            }
+            .overall-skills{
+                color:$text;
+                display: flex;
+                flex-direction: column;
+            }
+            .coding{
+                color:$text;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+            }
+        }
+    }   
+}
+
+// React spin
+#React{
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  0%{
+        transform:rotate(0deg);
+  }
+  100%{
+        transform:rotate(360deg);
+  }
+}
+
+@keyframes breathing {
+    0% {
+        transform: scale(0.9);
+    }
+  
+    50% {
+        transform: scale(1);
+        filter: brightness(150%);
+    }
+  
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+
+@media (max-width: 699px){
+    .skills-container{
+        position: relative;
+        height: 80vh;
+        padding:0 1rem;
+        overflow: hidden;
+        .skills-showcase{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            padding: 3rem 0;
+            svg{
+                position: absolute;
+                bottom:0;
+                height: 50%;
+                background: radial-gradient( at 50% bottom, #2e2e2e 20%, #181818 60%);
+            }
+            .skills-coding-container{
+                height:100%;
+                .coding-heading{
+                    color:$secondary;
+                    border-bottom:1px solid $secondary;
+                    width:auto;
+                    margin: 0.5rem 0;
+                }
+                .overall-skills{
+                    color:$text;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .coding{
+                    color:$text;
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                }
+            }
+        }   
+    }
+}
+@media (max-width: 900px){
+    .skills-container{
+        padding:0 3rem;
+
+        .skills-showcase{
+            padding: 1rem 0;
+            svg{
+                height: 50%;          
+            }
+            .skills-coding-container{
+                height:auto;
+                .coding-heading{
+                    margin: 1rem 0;
+                }
+            }
+        }   
+    }
+}
