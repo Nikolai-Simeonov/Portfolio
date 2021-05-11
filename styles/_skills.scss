@@ -1,7 +1,6 @@
 /* ===== Skills ===== */
 .skills-container{
     height: 60vh;
-    padding:0 20rem;
     overflow: hidden;
     .skills-showcase{
         position: relative;
@@ -11,7 +10,6 @@
         padding: 3rem 0;
         svg{
             height: 100%;
-            background: radial-gradient( at 50% bottom, #2e2e2e 20%, #181818 60%);
         }
         .skills-coding-container{
             height:100%;
@@ -22,12 +20,12 @@
                 margin: 1.5rem 0;
             }
             .overall-skills{
-                color:$text;
+                @include text;
                 display: flex;
                 flex-direction: column;
             }
             .coding{
-                color:$text;
+                @include text;
                 display: flex;
                 align-items: flex-end;
                 flex-direction: column;

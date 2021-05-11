@@ -11,7 +11,7 @@
     .intro-box{
         position: relative;
         width: 100%;
-        padding:0 20rem;
+        padding:0 15rem;
         display: flex;
         justify-content: space-between;
         .intro{
@@ -31,7 +31,7 @@
         }
         h1,h3{
             font-family: $main-font;
-            color:$secondary;
+            color:$primary;
         }
         .intro-img{
             width: 50%;
@@ -46,17 +46,18 @@
 }
 /* ===== Navbar ===== */
 .navbar{
-    padding: 3rem 20rem;
+    padding: 3rem 15rem;
     position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
+    color:$primary;
     background:transparent;
     min-height: 50px;
     max-height: 60px;
     top: 0;
     z-index: 1020;
-    transition: 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     .navbar-collapse.collapse{
         display: flex !important;
         justify-content: flex-end;
@@ -68,10 +69,9 @@
                 font-size:15px;
                 padding-left:3rem;
                 .nav-link{
-                    color:$secondary;
-                    filter: brightness(70%);
                     transition: all 0.2s ease-in-out;
                     &:hover{
+                        color:$tertiary;
                         filter: brightness(120%);
                     }
                 }
@@ -84,9 +84,11 @@
 }
 
 .navbar.fixed-top{
-    padding: 1.5rem 20rem;
-    background: #000;
-    transition: 0.5s ease-in-out;
+    padding: 1.5rem 15rem;
+    background: $primary;
+    color: $secondary;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.250);
+    transition: all 0.2s ease-in-out;
 }
 
 

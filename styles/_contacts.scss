@@ -6,7 +6,6 @@
     position: relative;
     background: $primary;
     height:60vh;
-    padding:0 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,19 +15,17 @@
         height:55%;
         position: absolute;
         bottom: 0;;
-        opacity: 0.5;
+        opacity: 0.8;
         z-index:0;
         padding-bottom:3rem;
     }
     .contact-img1{
         height:70%;
         left:0;
-        padding-left:20rem;
         padding-bottom:3rem;
     }
     .contact-img2{
         right:0;
-        padding-right:20rem;
     }
     .form-container{
         width: 100%;
@@ -38,7 +35,7 @@
         z-index:5;
         form{
             height: 100%;
-            width: 50%;
+            width: 100%;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -70,7 +67,7 @@
                         &:focus ~ label, input:valid ~ label{
                             top:-22px;
                             font-size:13px;
-                            color:$secondary;
+                            color:$tertiary;
                         }
                         &:focus ~ .bar:before, 
                         &:focus ~ .bar:after {
@@ -81,7 +78,7 @@
                         }
                     }
                     label{
-                        color:$text; 
+                        @include text;
                         font-size:15px;
                         font-weight:normal;
                         position:absolute;
@@ -128,20 +125,23 @@
                 width:60%;
                 margin-bottom:2.5rem;
                 label{
+                    @include text;
+                    font-weight: 600;
                     position: relative;
                     top:-5px;
                     left:5px;
-                    color:$text;
-                    font-weight: 600;
                 }
                 textarea{
                     height: 100%;
                     width: 100%;
+                    padding:5px 10px;
                     resize: none;
-                    background: transparent;
+                    background: rgba(255, 255, 255, 0.300);
+                    backdrop-filter: blur(3px);
                     outline: 0;
                     border: 1px solid $text;
                     color:$secondary;
+                    font-weight: 600;
                     transition: all 0.3s ease-in-out;
                     &:focus{
                         bordeR:1px solid $secondary;

@@ -1,21 +1,32 @@
 $main-font:'Montserrat', sans-serif;
+// Light Theme
+$primary: #fff;
+$secondary: #181818;
+$tertiary:#5F389E;
+$text: rgb(80, 80, 80);
+
+/* Dark Theme
 $primary: #181818;
 $secondary: #fff;
 $tertiary:#5F389E;
 $text: rgb(230, 230, 230);
+*/
 
-
+@mixin text{
+    color: $text;
+    font-weight: 500;
+}
 @mixin button{
-    filter: brightness(70%);
     outline: 0;
     border: 0;
     padding: 0.5rem 3rem;
-    color:$secondary;
+    color:$primary;
     background: $tertiary;
     margin-right:2rem;
-    transition: all 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 @mixin hoverEffect{
     filter: brightness(125%);
-    box-shadow:0 0 8px rgba(255, 255, 255, 0.450);
+    box-shadow:0 2px 8px rgba(0, 0, 0, 0.750);
+    transition: 0.2s ease-out;
 }

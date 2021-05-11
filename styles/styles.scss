@@ -26,6 +26,10 @@
 html{
     scroll-behavior: smooth;
 }
+::selection{
+    color:$primary;
+    background: $tertiary;
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
@@ -39,8 +43,9 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: $text;
   transition: background-color 5000s ease-in-out 0s;
 }
-section{
-    padding:3rem 0;
+section,
+footer{
+    padding:3rem 15rem;
     background: $primary;
 }
 a{
@@ -89,7 +94,7 @@ h5{
     color:$secondary;
     z-index: 10;
     width: 100%;
-    padding:0 20rem;
+    margin-bottom:1rem;
     .heading-border{
         position: absolute;
         width: 28em;
