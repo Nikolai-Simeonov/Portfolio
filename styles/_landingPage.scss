@@ -127,7 +127,11 @@
         padding: 0rem 1rem;
         .navbar-brand{
             position: absolute;
-            top:45px;
+            left:5px;
+            img{
+                height:40px;
+                width: 40px;
+            }
         }
         .navbar-collapse.collapse{
             .navbar-nav{

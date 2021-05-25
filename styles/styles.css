@@ -202,7 +202,11 @@ $text: rgb(230, 230, 230);
   }
   .navbar .navbar-brand {
     position: absolute;
-    top: 45px;
+    left: 5px;
+  }
+  .navbar .navbar-brand img {
+    height: 40px;
+    width: 40px;
   }
   .navbar .navbar-collapse.collapse .navbar-nav .nav-item .nav-link {
     font-size: 13px;
@@ -963,7 +967,6 @@ $text: rgb(230, 230, 230);
     position: absolute;
     bottom: 0;
     height: 50%;
-    background: radial-gradient(at 50% bottom, #2e2e2e 20%, #181818 60%);
   }
   .skills-container .skills-showcase .skills-coding-container {
     height: 100%;
@@ -1130,9 +1133,15 @@ $text: rgb(230, 230, 230);
     padding: 0 3rem;
   }
   .designs-showcase .swiper-container .swiper-slide {
-    width: 40%;
+    width: 80%;
     height: 100%;
     -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+  }
+  .modal-img .full-img {
+    height: 60%;
+  }
+  .modal-img .caption {
+    color: #fff;
   }
 }
 
@@ -1254,7 +1263,6 @@ $text: rgb(230, 230, 230);
     position: absolute;
     bottom: 0;
     height: 50%;
-    background: radial-gradient(at 50% bottom, #2e2e2e 20%, #181818 60%);
   }
   .skills-container .skills-showcase .skills-coding-container {
     height: 100%;
@@ -1913,6 +1921,11 @@ h5 {
 }
 
 @media (max-width: 900px) {
+  section,
+  footer {
+    padding: 3rem 1rem;
+    background: #fff;
+  }
   h1 {
     font-size: 32px;
   }

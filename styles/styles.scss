@@ -146,6 +146,11 @@ h5{
     }
 }
 @media (max-width: 900px){
+    section,
+    footer{
+        padding:3rem 1rem;
+        background: $primary;
+    }
     h1{
         font-size:32px;
     }
